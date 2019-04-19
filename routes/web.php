@@ -21,3 +21,8 @@ Route::get('/home', "pagecontroller@home");
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+Route::get('contact/create', 'contactcontroller@create');
+Route::post('contact/store', 'contactcontroller@store');
