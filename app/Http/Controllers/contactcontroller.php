@@ -2,12 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\contact;
 use Illuminate\Http\Request;
 
 class contactcontroller extends Controller
 {
 
 
+    public function index()
+    {
+        $contact=contact::all();
+       // return $contact;
+       return view('forms.contact_list',compact('contact'));
+    }
 
     public function create()
     {
@@ -16,8 +23,11 @@ class contactcontroller extends Controller
 
     public function store(Request $request)
     {
-        $data=$request->all();
-      return $input;
+        $input=$request->all();
+
+        $data=contact::create($input);
+
+        return redirect('contact/create');
     }
 
 

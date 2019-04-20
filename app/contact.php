@@ -13,5 +13,6 @@ class contact extends Model
         'mobile',
         'address',
 
+
     ];
 }

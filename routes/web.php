@@ -24,5 +24,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 
+Route::get('contact/', 'contactcontroller@index');
 Route::get('contact/create', 'contactcontroller@create');
 Route::post('contact/store', 'contactcontroller@store');
+
+Route::post('/create','ProjectController@store');
